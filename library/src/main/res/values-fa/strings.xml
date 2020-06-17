@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_unlicensed">مجوز این برنامه رد شد</string>
+    <string name="app_unlicensed_description">این برنامه دارای مجوز نیست یا مجوز آن معتبر نیست. خواهشمندیم آن‌را از یک منبع قابل اعتماد بارگیری کنید.</string>
+    <string name="app_unlicensed_close">بستن</string>
+    <string name="unauthorized_app_found">مجوز نامعتبر است؛ زیرا ما متوجه شده‌ایم که برنامۀ %1$s روی دستگاه شما نصب شده است.</string>
+    <string name="unauthorized_app_blocked">مجوز نامعتبر است زیرا از برنامۀ غیرمجاز مانند Lucky Patcher استفاده کرده‌اید. خواهشمندیم هنگامی که برنامهٔ غیرمجاز را ‌صورت کامل حذف کردید، این برنامه را دوباره نصب کنید.</string>
+</resources>

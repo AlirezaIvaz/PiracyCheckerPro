@@ -1,4 +1,4 @@
-<h1 align="center">PiracyChecker <a href="#how-to-include"><img src="https://jitpack.io/v/ir.alirezaivaz/PiracyChecker.svg"></a></h1>
+<h1 align="center">PiracyChecker <a href="#how-to-include"><img src="https://jitpack.io/v/ir.alirezaivaz/PiracyCheckerPro.svg"></a></h1>
 <h4 align="center">Android Library</h4>
 
 <p align="center">

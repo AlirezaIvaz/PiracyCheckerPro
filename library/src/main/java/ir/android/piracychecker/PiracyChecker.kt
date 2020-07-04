@@ -5,15 +5,10 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.provider.Settings
 import android.util.Log
 import androidx.annotation.ColorRes
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
-import ir.android.licensing.AESObfuscator
-import ir.android.licensing.LibraryChecker
-import ir.android.licensing.LibraryCheckerCallback
-import ir.android.licensing.ServerManagedPolicy
 import ir.android.piracychecker.activities.LicenseActivity
 import ir.android.piracychecker.callbacks.AllowCallback
 import ir.android.piracychecker.callbacks.DoNotAllowCallback
@@ -24,7 +19,6 @@ import ir.android.piracychecker.enums.Display
 import ir.android.piracychecker.enums.InstallerID
 import ir.android.piracychecker.enums.PiracyCheckerError
 import ir.android.piracychecker.enums.PirateApp
-import ir.android.piracychecker.utils.SaltUtils
 import ir.android.piracychecker.utils.getPirateApp
 import ir.android.piracychecker.utils.isDebug
 import ir.android.piracychecker.utils.isInEmulator
@@ -76,10 +70,7 @@ class PiracyChecker(
     private var allowCallback: AllowCallback? = null
     private var doNotAllowCallback: DoNotAllowCallback? = null
     private var onErrorCallback: OnErrorCallback? = null
-    
-    // LVL
-    private var libraryLVLChecker: LibraryChecker? = null
-    
+
     // Dialog
     private var dialog: PiracyCheckerDialog? = null
     
@@ -309,7 +300,6 @@ class PiracyChecker(
     
     fun destroy() {
         dismissDialog()
-        destroyLVLChecker()
         context = null
     }
     
@@ -370,33 +360,7 @@ class PiracyChecker(
         } else if (!verifyUnauthorizedApp()) {
             doNotAllowCallback?.doNotAllow(PiracyCheckerError.BLOCK_PIRATE_APP, null)
         } else {
-            if (enableLVL) {
-                val deviceId =
-                    Settings.Secure.getString(context?.contentResolver, Settings.Secure.ANDROID_ID)
-                destroyLVLChecker()
-                libraryLVLChecker =
-                    LibraryChecker(
-                        context,
-                        ServerManagedPolicy(
-                            context,
-                            AESObfuscator(
-                                SaltUtils.getSalt(context), context?.packageName, deviceId)),
-                        licenseBase64)
-                libraryLVLChecker?.checkAccess(object : LibraryCheckerCallback {
-                    override fun allow(reason: Int) {
-                        doExtraVerification(true)
-                    }
-                    
-                    override fun dontAllow(reason: Int) {
-                        doExtraVerification(false)
-                    }
-                    
-                    override fun applicationError(errorCode: Int) {
-                        onErrorCallback?.onError(
-                            PiracyCheckerError.getCheckerErrorFromCode(errorCode))
-                    }
-                })
-            } else {
+            if (!enableLVL) {
                 doExtraVerification(true)
             }
         }
@@ -468,13 +432,7 @@ class PiracyChecker(
         dialog?.dismiss()
         dialog = null
     }
-    
-    private fun destroyLVLChecker() {
-        libraryLVLChecker?.finishAllChecks()
-        libraryLVLChecker?.onDestroy()
-        libraryLVLChecker = null
-    }
-    
+
     companion object {
         private const val LIBRARY_PREFERENCES_NAME = "license_check"
     }

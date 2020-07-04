@@ -30,7 +30,7 @@ And add the library to your module **build.gradle**:
 
 ```gradle
 dependencies {
-    implementation 'ir.alirezaivaz:PiracyCheckerPro:1.1'
+    implementation 'ir.alirezaivaz:PiracyCheckerPro:1.2'
 }
 ```
 
@@ -157,6 +157,8 @@ It will check for:
 * APK Editor
 * APK Editor Pro
 * KingRoot
+* KingoRoot
+* vRoot
 * Apktool
 
 </details><br>

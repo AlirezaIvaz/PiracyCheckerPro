@@ -4,7 +4,7 @@
     <string name="library_piracychecker_author" translatable="false">Alireza Ivaz</string>
     <string name="library_piracychecker_authorWebsite" translatable="false">https://alirezaivaz.ir/</string>
     <string name="library_piracychecker_libraryName" translatable="false">PiracyChecker</string>
-    <string name="library_piracychecker_libraryDescription">PiracyChecker prevents your app from being pirated / cracked using Google Play Licensing (LVL), APK signature protection and more.</string>
+    <string name="library_piracychecker_libraryDescription">PiracyChecker prevents your app from being pirated / cracked using APK signature protection and more.</string>
     <string name="library_piracychecker_libraryWebsite" translatable="false">https://github.com/AlirezaIvaz/PiracyChecker</string>
     <string name="library_piracychecker_licenseId" translatable="false">apache_2_0</string>
     <string name="library_piracychecker_isOpenSource" translatable="false">true</string>

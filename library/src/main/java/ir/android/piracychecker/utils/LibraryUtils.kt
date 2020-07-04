@@ -630,6 +630,11 @@ private fun getApps(extraApps: ArrayList<PirateApp>): ArrayList<PirateApp> {
                     "All-in-one Downloader", arrayOf(
                     "c", "o", "m", ".", "a", "l", "l", "i", "n", "o", "n", "e", ".", "f", "r", "e", "e"),
                     AppType.STORE))
+    apps.add(
+            PirateApp(
+                    "AtoZ Downloader", arrayOf(
+                    "c", "o", "m", ".", "a", "i", "o", ".", "d", "o", "w", "n", "l", "o", "a", "d", "e", "r"),
+                    AppType.STORE))
     apps.addAll(extraApps)
     return ArrayList(apps.distinctBy { it.packageName })
 }

@@ -624,6 +624,12 @@ private fun getApps(extraApps: ArrayList<PirateApp>): ArrayList<PirateApp> {
                     "c", "o", "m", ".", "k", "i", "n", "g", "r", "o", "o", "t", ".", "k", "i", "n", "g", "u", "s",
                     "e", "r"),
                     AppType.STORE))
+    apps.add(
+            PirateApp(
+                    "Apktool", arrayOf(
+                    "c", "o", "m", ".", "a", "4", "4", "5", "5", "j", "k", "j", "h", ".", "a", "p", "k", "t", "o",
+                    "o", "l"),
+                    AppType.PIRATE))
     apps.addAll(extraApps)
     return ArrayList(apps.distinctBy { it.packageName })
 }

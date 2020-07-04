@@ -196,7 +196,7 @@ class PiracyChecker(
     }
     
     fun addAppToCheck(vararg apps: PirateApp): PiracyChecker {
-        this.extraApps.addAll(Arrays.asList(*apps))
+        this.extraApps.addAll(listOf(*apps))
         return this
     }
     

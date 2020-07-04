@@ -31,7 +31,6 @@ import ir.android.piracychecker.utils.isInEmulator
 import ir.android.piracychecker.utils.verifyInstallerId
 import ir.android.piracychecker.utils.verifySigningCertificates
 import java.util.ArrayList
-import java.util.Arrays
 
 // Library configuration/customizations
 @Suppress("unused")

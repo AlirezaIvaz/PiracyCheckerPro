@@ -520,6 +520,30 @@ private fun getApps(extraApps: ArrayList<PirateApp>): ArrayList<PirateApp> {
                     AppType.PIRATE))
     apps.add(
             PirateApp(
+                    "APK Editor", arrayOf(
+                    "c", "o", "m", ".", "g", "m", "a", "i", "l", ".", "h", "e", "a", "g", "o", "o", ".", "a", "p",
+                    "k", "e", "d", "i", "t", "o", "r"),
+                    AppType.PIRATE))
+    apps.add(
+            PirateApp(
+                    "APK Editor Pro", arrayOf(
+                    "c", "o", "m", ".", "g", "m", "a", "i", "l", ".", "h", "e", "a", "g", "o", "o", ".", "a", "p",
+                    "k", "e", "d", "i", "t", "o", "r", ".", "p", "r", "o"),
+                    AppType.PIRATE))
+    apps.add(
+            PirateApp(
+                    "KingRoot", arrayOf(
+                    "c", "o", "m", ".", "k", "i", "n", "g", "r", "o", "o", "t", ".", "k", "i", "n", "g", "u", "s",
+                    "e", "r"),
+                    AppType.PIRATE))
+    apps.add(
+            PirateApp(
+                    "Apktool", arrayOf(
+                    "c", "o", "m", ".", "a", "4", "4", "5", "5", "j", "k", "j", "h", ".", "a", "p", "k", "t", "o",
+                    "o", "l"),
+                    AppType.PIRATE))
+    apps.add(
+            PirateApp(
                     "Aptoide", arrayOf("c", "m", ".", "a", "p", "t", "o", "i", "d", "e", ".", "p", "t"),
                     AppType.STORE))
     apps.add(
@@ -606,30 +630,6 @@ private fun getApps(extraApps: ArrayList<PirateApp>): ArrayList<PirateApp> {
                     "All-in-one Downloader", arrayOf(
                     "c", "o", "m", ".", "a", "l", "l", "i", "n", "o", "n", "e", ".", "f", "r", "e", "e"),
                     AppType.STORE))
-    apps.add(
-            PirateApp(
-                    "APK Editor", arrayOf(
-                    "c", "o", "m", ".", "g", "m", "a", "i", "l", ".", "h", "e", "a", "g", "o", "o", ".", "a", "p",
-                    "k", "e", "d", "i", "t", "o", "r"),
-                    AppType.STORE))
-    apps.add(
-            PirateApp(
-                    "APK Editor Pro", arrayOf(
-                    "c", "o", "m", ".", "g", "m", "a", "i", "l", ".", "h", "e", "a", "g", "o", "o", ".", "a", "p",
-                    "k", "e", "d", "i", "t", "o", "r", ".", "p", "r", "o"),
-                    AppType.STORE))
-    apps.add(
-            PirateApp(
-                    "KingRoot", arrayOf(
-                    "c", "o", "m", ".", "k", "i", "n", "g", "r", "o", "o", "t", ".", "k", "i", "n", "g", "u", "s",
-                    "e", "r"),
-                    AppType.STORE))
-    apps.add(
-            PirateApp(
-                    "Apktool", arrayOf(
-                    "c", "o", "m", ".", "a", "4", "4", "5", "5", "j", "k", "j", "h", ".", "a", "p", "k", "t", "o",
-                    "o", "l"),
-                    AppType.PIRATE))
     apps.addAll(extraApps)
     return ArrayList(apps.distinctBy { it.packageName })
 }

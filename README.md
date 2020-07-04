@@ -43,37 +43,6 @@ dependencies {
 
 ## Usage
 
-### Verify Google Play Licensing (LVL)
-Google Play offers a licensing service that lets you enforce licensing policies for applications that you publish on Google Play. With Google Play Licensing, your application can query Google Play to obtain the licensing status for the current user.
-
-Any application that you publish through Google Play can use the Google Play Licensing service. No special account or registration is needed.
-
-For more information check out the [Google Developers page](https://developer.android.com/google/play/licensing/index.html).
-
-```kotlin
-piracyChecker {
-	enableGooglePlayLicensing("BASE_64_LICENSE_KEY")
-	...
-}.start()
-```
-
-<details><summary><b>Java Sample</b></summary>
-
-```java
-new PiracyChecker(this)
-	.enableGooglePlayLicensing("BASE_64_LICENSE_KEY")
-	...
-	.start();
-```
-
-</details><br>
-
-
-
-In order to retrieve your BASE64 license key your app must be uploaded to the [Google Play Developer Console](https://play.google.com/apps/publish/). Then access to your app -> Services and APIs.
-
-When using Google Play Licensing your should call `.destroy()` in the `onDestroy()` method of your Activity to avoid multiple instances of the service running. Have a look to the Wiki for a [sample Activity](https://github.com/AlirezaIvaz/PiracyCheckerPro/wiki/Using-Google-Play-Licensing-(LVL)) with `destroy()`.
-
 ### Verify your app's signing certificates (signatures)
 In a nutshell, developers must sign applications with their private key/certificate (contained in a .keystore file) before the app can be installed on user devices. The signing certificate must stay consistent throughout the life of the app, and typically have an expiry date of 25 years in the future.
 

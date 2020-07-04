@@ -544,6 +544,17 @@ private fun getApps(extraApps: ArrayList<PirateApp>): ArrayList<PirateApp> {
                     AppType.PIRATE))
     apps.add(
             PirateApp(
+                    "KingoRoot", arrayOf(
+                    "c", "o", "m", ".", "d", "e", "s", "t", "i", "n", "y", "a", "y", ".", "s", "k", "r", "o", "t",
+                    "b"),
+                    AppType.PIRATE))
+    apps.add(
+            PirateApp(
+                    "vRoot", arrayOf(
+                    "c", "o", "m", ".", "v", "r", "o", "o", "t", ".", "a", "p", "p"),
+                    AppType.PIRATE))
+    apps.add(
+            PirateApp(
                     "Aptoide", arrayOf("c", "m", ".", "a", "p", "t", "o", "i", "d", "e", ".", "p", "t"),
                     AppType.STORE))
     apps.add(

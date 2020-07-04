@@ -287,7 +287,7 @@ class PiracyChecker(
         return this
     }
     
-    fun callback(callback: PiracyCheckerCallback): PiracyChecker {
+    private fun callback(callback: PiracyCheckerCallback): PiracyChecker {
         this.allowCallback = object : AllowCallback {
             override fun allow() {
                 callback.allow()

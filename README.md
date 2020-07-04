@@ -30,7 +30,7 @@ And add the library to your module **build.gradle**:
 
 ```gradle
 dependencies {
-    implementation 'ir.alirezaivaz:PiracyCheckerPro:1.0'
+    implementation 'ir.alirezaivaz:PiracyCheckerPro:1.1'
 }
 ```
 

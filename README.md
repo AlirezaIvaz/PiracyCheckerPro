@@ -154,22 +154,10 @@ It will check for:
 * Game Hacker
 * AGK - App Killer
 * Content Guard Disabler
-* Aptoide
-* BlackMart
-* Mobogenie
-* 1Mobile
-* GetApk
-* GetJar
-* SlideMe
-* ACMarket
-* AppCake
-* Z Market
-* Modded Play Store
-* Mobilism Market
-* All-in-one Downloader
 * APK Editor
 * APK Editor Pro
 * KingRoot
+* Apktool
 
 </details><br>
 
